@@ -1,0 +1,62 @@
+.example-container {
+  width: 100vw;
+  height: 100vh;
+}
+.mat-drawer-content{
+  background-color: #f8f8f8;
+}
+.mat-drawer{
+  background: #08173B;
+  width: 20vw;    
+}
+
+.btn-Event{
+  display: flex;
+  text-align: center;
+  align-items: center; 
+  justify-content: left;
+  margin-top: 1em;
+  width: 13vw;
+  height: 6.5vh;
+  background: #3D77FF;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  color: whitesmoke; 
+}
+.btn-Event mat-icon{
+  margin-right: 1em;
+}
+
+.sidenav{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidenav h1{
+  font-weight: bold;
+  color: white;
+}
+
+.header-admin{
+  height: 12%;
+}
+
+.btns-admin{
+  height: 65%;
+}
+
+.d-inline-block.align-top{
+  border-radius: 100%;
+  margin: 10px;
+}
+.navbar-brand{
+  display: flex;
+  text-align: center; 
+  justify-content: center;
+  align-items: center;
+  color: white;
+}

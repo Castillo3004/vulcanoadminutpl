@@ -1,0 +1,17 @@
+<h2 class="h2">{{data.titleA}}</h2>
+<div class="dialog">
+    <carousel 
+        [images]="images"
+        [width]="300"
+        [height]="300"
+        [cellWidth]="'100%'"
+        [cellsToShow] = "1"
+        [autoplay]="true"
+		[dots]="true"
+		[loop]="true"
+        class="carousel">                 
+    </carousel>
+    <button mat-raised-button class="btn-confirmar">
+        Confirmar
+    </button> 
+</div>

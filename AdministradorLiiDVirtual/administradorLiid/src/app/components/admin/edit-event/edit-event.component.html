@@ -1,0 +1,23 @@
+<div class="layout-event">
+    <h2><b>Editar Evento </b> </h2>
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="mb-3">
+            <label class="form-label">Nombre Evento</label>
+            <input formControlName = "title" type="text" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label  class="form-label">Fecha de Inicio</label>
+            <input formControlName = "dateStar" type="date" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Fecha de fin</label>
+            <input formControlName = "datefin" type="date" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Descripción</label>
+            <input formControlName = "description" type="text" class="form-control" required>
+        </div>
+        <button [disabled]="!editForm.valid" type="submit" class="btn btn-primary">Actualizar</button>
+        
+    </form>
+</div>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "administradorliid": {
+      "hosting": {
+        "administradorLiid": [
+          "administradorliid"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "administradorliid"
+  }
+}

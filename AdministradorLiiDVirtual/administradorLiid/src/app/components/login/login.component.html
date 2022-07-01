@@ -1,0 +1,80 @@
+<html>
+  <body>
+    <div class="container">
+      <div class="card text-center">
+        <div class="card-header"><b>Login</b> <br /></div>
+        <div class="card-body p-4">
+          <br /><label class="datos"> Usuario o Correo </label>
+          <input
+            type="email"
+            class="form-control m-2"
+            placeholder="Ingrese su usuario o Correo"
+            [(ngModel)]="usuario.email"
+          /> 
+          <label class="datos">Contraseña</label>
+          <input
+            type="password"
+            class="form-control m-2"
+            placeholder="Ingrese su Contraseña"
+            [(ngModel)]="usuario.password"
+          /> 
+          <button class="btn btn-primary btn-block m-4" >
+            Registrarse
+          </button>
+          <button
+            class="btn btn-info btn-block"
+            id="but3"(click)="ingresarConGoogle()"
+          >
+            Ingresar con Google
+          </button>
+        </div>
+      </div>
+
+      <div class="header">
+        <img src="../../../assets/logo-utpl.png" width="120px" alt="logo" />
+      </div>
+
+      <div class="footer">
+        <p class="copyr">
+          Copyright 2022 ® Universidad Tecnica Particular de Loja. Todos los
+          derechos Reservados
+        </p>
+
+        <div class="social">
+          <a href="https://es-la.facebook.com/utpl.loja/">
+            <img
+              class="icono"
+              src="../../../assets/logo-facebook-blanco.png"
+              alt="fb"
+            />
+          </a>
+
+          <a href="https://twitter.com/utpl?lang=es">
+            <img
+              class="icono"
+              id="tw"
+              src="../../../assets/icono-twitter.png"
+              alt="tw"
+            />
+          </a>
+
+          <a href="https://www.youtube.com/user/utpl/">
+            <img
+              class="icono"
+              src="../../../assets/logo-youtube-blanco.png"
+              alt="youtube"
+            />
+          </a>
+
+          <a href="https://www.instagram.com/utpl/?hl=es-la">
+            <img
+              class="icono"
+              src="../../../assets/logo-instagram-blanco.png"
+              alt="instagram"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<div class="layout-event">
+    <h1><b>Eventos</b> </h1>
+    <table class="table table-hover table-striped">
+        <thead class="cont-table text-white">
+            <tr class="encabezado-tabla">
+                <th>Titulo</th>
+                <th>Fecha Inicio</th>
+                <th>Fecha Fin</th>
+                <th>Descripcion</th>
+                <th>Fecha Creacion</th>
+                <th class="action">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let post of Event">
+                <td>{{ post.title}}</td>
+                <td>{{ post.dateStar  }}</td>
+                <td>{{ post.datefin }}</td>
+                <td>{{ post.description}}</td>
+                <td>{{ post.createDate | date:"short"}}</td>
+                <td class="items">
+                    <button  routerLink='./editevent/{{post.id}}' class="btn btn-outline-secondary m-1">
+                        <mat-icon aria-hidden="false">edit</mat-icon>
+                        
+                    </button>
+    
+                    <button (click)="deleteRow(post)" class="btn btn-outline-danger">
+                        <mat-icon aria-hidden="false">delete</mat-icon>
+                        
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <p *ngIf="Event.length === 0"> 
+        <b>¿Deseas Crear un Evento?</b><br>
+        <a routerLink="/admin/cevento" class="btn2 btnprimary" type="button">Crear</a>
+    </p>
+
+     
+</div>  
+
+
+

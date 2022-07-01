@@ -1,0 +1,32 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+        <div class="sidenav">  
+            <div class="header-admin"><h1>Vulcano UTPL </h1></div>    
+            <div class="btns-admin">
+
+                <a class="navbar-brand" *ngIf="userLogged | async as user ">
+                    <img *ngIf="user.photoURL" src="{{user.photoURL}}" width="40" height="40" class="d-inline-block align-top">
+                    {{user.displayName}}
+                </a>
+
+                <button mat-raised-button class="btn-Event" (click)="event()">
+                    <mat-icon aria-hidden="false">event</mat-icon>
+                    Evento
+                </button>  
+                <button mat-raised-button class="btn-Event" (click)="eventList()">
+                    <mat-icon aria-hidden="false">view_list</mat-icon>
+                    Lista de eventos
+                </button>
+                <button mat-raised-button class="btn-Event" (click)="standCreate()">
+                    <mat-icon aria-hidden="false">create</mat-icon>
+                    Stand
+                </button>
+                <button mar mat-raised-button class="btn-Event" (click)="logout()">
+                    <mat-icon aria-hidden="false">logout</mat-icon>
+                    Cerrar Sesion
+                </button> 
+            </div>                    
+        </div>        
+    </mat-drawer>
+    <mat-drawer-content><router-outlet></router-outlet></mat-drawer-content>
+</mat-drawer-container>

@@ -1,0 +1,81 @@
+
+<div class="layout-event">
+    <h1><b>Crear Envento</b> </h1>
+    <h2><b>SELECCIONE UN ESCENARIO VIRTUAL:</b> </h2>
+    <div class="img-container">
+        <div class="card-img">
+            <img src="./../../../../assets/Recurso1.png" alt="">
+            <h3 class="title-img">{{title1}}</h3> 
+            <button mat-mini-fab color="primary" aria-label=""(click)="openDialog(title1)">
+                <mat-icon>visibility</mat-icon>
+            </button>         
+        </div>
+        <div class="card-img">
+            <button mat-mini-fab color="primary" aria-label=""(click)="openDialog(title2)">
+                <mat-icon>visibility</mat-icon>
+            </button>
+            <img src="./../../../../assets/Recurso2.png" alt="">
+            <h3 class="title-img">{{title2}}</h3>          
+        </div>
+        <div class="card-img">
+            <button mat-mini-fab color="primary" aria-label=""(click)="openDialog(title3)">
+                <mat-icon>visibility</mat-icon>
+            </button>
+            <img src="./../../../../assets/Recurso3.png" alt="">
+            <h3 class="title-img">{{title3}}</h3>          
+        </div>
+    </div>
+    <div class="from-container">
+        
+        <form [formGroup]="postForm" (ngSubmit)="onSubmit()" novalidate>
+            <div class="mb-3">
+                <label class="form-label">Nombre Evento</label>
+                <input formControlName = "title" type="text" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label  class="form-label">Fecha de Inicio</label>
+                <input formControlName = "dateStar" type="date" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Fecha de fin</label>
+                <input formControlName = "datefin" type="date" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Descripción</label>
+                <textarea matInput  cols="30" formControlName = "description" type="text" class="form-control" rows="5" required></textarea>
+            </div>
+            <button [disabled]="!postForm.valid" type="submit" class="btn btn-primary">Crear</button>
+            
+        </form>
+    </div>
+    <!-- <div class="from-container">
+        <div class="frm-event">
+            <p class="label"> Nombre del evento:</p>
+            <input matInput type="text" [(ngModel)]="nameEvent" class="form-field">
+           
+        </div>
+        <div class="frm-event">
+            <p class="label">Fecha de inicio:</p>
+            <input matInput type="date" [(ngModel)]="dateStar" class="form-field">
+            
+        </div>
+        <div class="frm-event">
+            <p class="label">Fecha de fin:</p>
+            <input matInput type="date" [(ngModel)]="dateFin" class="form-field">
+          
+        </div>
+        <div class="frm-event">
+            <p class="label">Descripción:</p>
+            <textarea matInput  cols="30" [(ngModel)]="description" rows="10" class="from-area"></textarea>
+            <button *ngIf="description" matSuffix mat-icon-button aria-label="Clear" (click)="description=''">
+                <mat-icon>close</mat-icon>
+            </button>
+        </div>
+    </div>
+    <button mat-raised-button class="btn-crearEvent" (click)="newEvent()">
+        Crear Evento
+    </button>   -->
+
+    
+
+</div>
